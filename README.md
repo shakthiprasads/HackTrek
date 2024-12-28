@@ -1,71 +1,128 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# HackTrek: Vulnerable Web Application
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## **Overview**
+HackTrek is a learning platform designed to help security enthusiasts and professionals understand and exploit common web application vulnerabilities. Built using the MERN (MongoDB, Express.js, React.js, Node.js) stack, HackTrek provides hands-on challenges that simulate real-world security flaws, enabling users to hone their penetration testing skills in a safe environment.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The platform includes challenges like:
+- SQL Injection
+- Cross-Site Scripting (XSS)
+- File Upload Vulnerabilities
+- Weak Password Validation
+- Admin Login Exploitation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+HackTrek also includes a **Chatbot** implemented directly within the MERN stack to guide users through challenges.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## **Prerequisites**
+Before you can set up HackTrek, ensure you have the following installed:
+1. **Node.js** (v14 or later)
+2. **MongoDB** (Local or cloud-based)
+3. **npm** (Node Package Manager)
+4. **Git** (for cloning the repository)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## **Code Dependencies**
+The platform relies on several dependencies for both backend and frontend functionality. Below are the key dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend:
+- **bcryptjs**: For password hashing.
+- **jsonwebtoken**: To create and verify tokens for authentication.
+- **xss**: To handle XSS sanitization in vulnerable endpoints.
+- **multer**: For managing file uploads in challenges.
+- **dotenv**: To manage environment variables.
+- **body-parser**: To parse incoming request bodies in a middleware.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Frontend:
+- **axios**: To handle API requests.
+- **react-router-dom**: For routing in the frontend.
+- **Bootstrap**: For UI components and styling.
 
-### `npm run eject`
+To view all dependencies, refer to the `package.json` files in both the `backend` and `frontend` directories.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## **Setup Instructions**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Clone the Repository
+```bash
+git clone https://github.com/varun-1518/HackTrek.git
+cd HackTrek
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Backend Setup
+1. Navigate to the `backend` directory:
+   ```bash
+   cd backend
+   ```
+2. Install the necessary dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a `.env` file in the `backend` directory with the following variables:
+   ```env
+   MONGO_URI=<your_mongo_connection_string>
+   PORT=5000
+   ```
+4. Create a uploads folder in backend directory .The uploads folder is required to store files uploaded during challenges. Create the folder in the backend directory:
+   ```bash
+   mkdir uploads
+   ```
+5. Start the backend server:
+   ```bash
+   npm start
+   ```
 
-## Learn More
+### Frontend Setup
+1. Navigate to the `frontend` directory:
+   ```bash
+   cd ../frontend
+   ```
+2. Install the necessary dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the frontend server:
+   ```bash
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## **Features**
 
-### Code Splitting
+### Challenges
+1. **SQL Injection**: Exploit database queries to bypass authentication.
+2. **XSS (Reflected and DOM-based)**: Inject scripts and manipulate the DOM.
+3. **File Upload Vulnerabilities**: Test file upload restrictions and exploit them.
+4. **Admin Login**: Gain unauthorized access through improper validation.
+5. **Weak Password Validation**: Discover and exploit weak password mechanisms.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Chatbot Assistant
+Implemented within the MERN stack, the chatbot provides:
+- Guidance for solving challenges.
+- Educational insights and solutions.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## **Conclusion**
+HackTrek is a comprehensive platform for learning web security by practicing real-world vulnerabilities. It provides a safe environment for experimenting with attack techniques and understanding secure coding practices.
 
-### Advanced Configuration
+We encourage contributions to improve the platform and feedback for new challenges. If you encounter any issues, submit them via GitHub Issues.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## **License**
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# HackTrek" 
+### **Happy Hacking!** 🛡️✨
